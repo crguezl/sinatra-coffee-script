@@ -1,0 +1,15 @@
+The gem coffee-script provides the class CoffeeScript,
+which is a bridge to the CoffeeScript compiler:
+
+    [~/sinatra/sinatra-coffeescript]$ pry
+    [1] pry(main)> require 'coffee-script'
+    => true
+    [2] pry(main)> z = CoffeeScript.compile 'views/application.coffee'
+    => "(function() {\n  views / application.coffee;\n\n}).call(this);\n"
+    [3] pry(main)> puts z
+    (function() {
+      views / application.coffee;
+
+    }).call(this);
+    => nil
+
